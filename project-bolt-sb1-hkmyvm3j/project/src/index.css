@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  @apply bg-stone-100 text-stone-900 min-h-screen;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif', serif;
+}
+
+.bg-board-pattern {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-stone-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-highlight;
+}
